@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;300;400;500;600&display=swap');
+:root{
+  --primary-color : #584848;
+  --secondary-color : #f3b5a4;
+  --third-color : #393b45;
+  --another-color : #d8d9de;
+}
+a{
+  text-decoration: none;
+  color: var(--another-color);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: #584848b4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 5px 25px #21212124;
+}
+.logo {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2.6rem;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 600;
+  position: relative;
+}
+.navbar a {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: .3s ease all;
+  text-transform: capitalize;
+}
+.navbar a::after{
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  opacity: 0;
+  height: 2px;
+  border-radius: 6px;
+  background-color: var(--secondary-color);
+  transition: .3s ease all;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+.navbar a:hover {
+  color: var(--secondary-color);
+}
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+}
+.home .img-container {
+  min-width: 40%;
+  width: 100px;
+}
+.home .img-container img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(8%) brightness(0.98);
+}
+.home-content {
+  max-width: 600px;
+}
+.home-content h3 {
+  font-size : 32px;
+  font-weight: 400;
+}
+.home-content h1 {
+  font-size : 52px;
+  font-weight: 700;
+  margin: -10px 0;
+}
+.home-content p {
+  font-size : 18px;
+}
+.rs {
+  margin: 16px 0;
+}
+.rs a {
+  margin: 0 5px;
+  font-size: 28px;
+  padding: 0 auto;
+  color: #fff;
+  transition: .2s ease;
+  display: inline-flex;
+}
+.rs a:hover{
+  color: var(--secondary-color);
+}
+.btn-box {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  border-radius: 22px;
+  transition: .3s ease all;
+}
+.btn-box:hover{
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 10px var(--secondary-color),
+  0 5px 35px var(--secondary-color);
+}
+
+.about,
+.compet,
+.annexe,
+.contact{
+  padding: 20px 6%;
+}
+.section-title {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: .1rem;
+}
+.about .experience {
+  margin-bottom: 40px;
+}
+.about .experience h4,.formation h4 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--another-color);
+}
+.exp {
+  margin: 20px 0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+.exp h6 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.exp-item {
+  background: linear-gradient(-60deg , #6e5a5a5a , #bd9999c2);
+  border: 2px solid var(--another-color);
+  padding: 14px 10px;
+  border-radius: 14px;
+  text-align: center;
+  min-height: max-content;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pro .exp-item {
+  max-height: max-content;
+  height: 340px;
+}
+.exp-item .date{
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  font-weight: 300;
+}
+.exp-item .lieu{
+  font-size: 1rem;
+  margin: 10px auto;
+}
+.exp-item .fct{
+  font-size: 1rem;
+  margin: 10px auto;
+  text-transform: uppercase;
+  color: var(--another-color);
+}
+.exp-item ul.taches,
+ul.compet-des {
+  list-style: none;
+  font-size: .8rem;
+  margin: 10px 0;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+.exp-item ul.taches li i,
+ul.compet-des li i {
+  font-size: .6rem;
+  margin-right: 6px;
+}
+.pro {
+  margin: 20px 0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 35px;
+}
+.formation .for img{
+  width: 100%;
+}
+.compet-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+.compet .compet-item {
+  background: linear-gradient(60deg , #272626 , #27262675 , transparent ) , url(./img/élec.jpg) center;
+  background-size: cover;
+  border-radius: 8px;
+  padding: 20px 10px;
+  position: relative;
+  text-align: center;
+  min-width: 300px;
+  width: 36%;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+ul.compet-des{
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+.compet .compet-item h4{
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--another-color);
+}
+.compet .compet-des {
+  color: #fff;
+}
+.compet .auto {
+  background: linear-gradient(-120deg , #272626 , #27262695 , #27262645 ) , url(./img/14.jpg) center;
+  background-size: cover;
+}
+.compet .meca {
+  background: linear-gradient(60deg , #272626 , #27262695 , transparent ) , url(./img/pneumatique.jpg) center;
+  background-size: cover;
+}
+.compet .autre {
+  background: linear-gradient(-120deg , #272626 , #27262695 , #27262655 ) , url(./img/gp.png) center;
+  background-size: cover;
+}
+.annexe{
+  text-align: center;
+}
+.annexe p {
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+.annexe p span {
+  font-size: .8rem;
+  color: var(--another-color);
+  text-decoration: underline;
+}
+.annexe .pieces {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+  margin: 20px 0;
+}
+.annexe .pieces a {
+  padding: 12px 28px;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background: transparent;
+  border-radius: 22px;
+  text-transform: uppercase;
+  transition: .3s ease all;
+}
+.annexe .pieces a:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 10px var(--secondary-color),
+  0 5px 35px var(--secondary-color);
+}
+.contact {
+  position: relative;
+  min-height: 80vh;
+  background: linear-gradient(60deg, #584848a8 , #584848ee) , url(./img/bg1.jpeg) bottom no-repeat ;
+  background-size: cover;
+  overflow: hidden;
+
+}
+
+.contact  p {
+  font-weight: 300;
+}
+.contact .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: 0 40%;
+}
+.contact .container .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.contact .container .box .icon {
+  min-width: 60px;
+  height: 60px;
+  font-size: 22px;
+  background-color: #fff;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.contact .container .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  flex-direction: column;
+  font-weight: 300;
+}
+.contact .container .box .text h3{
+  font-weight: 500;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
